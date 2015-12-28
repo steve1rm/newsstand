@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="240dp">
+        <bitmap android:src="@drawable/couple"/>
+    </item>
+
+    <item android:height="240dp">
+        <shape>
+            <solid android:color="@color/colorBackground"/>
+        </shape>
+    </item>
+</layer-list>
