@@ -6,10 +6,10 @@
         </shape>
     </item>
 
-    <item>
+    <item android:top="30dp">
         <bitmap
             android:src="@drawable/ic_view_day_white_48dp"
-            android:gravity="center"/>
+            android:gravity="top"/>
     </item>
 
     <item>
@@ -18,10 +18,10 @@
         </shape>
     </item>
 
-    <item android:top="20dp" android:left="30dp">
+    <item android:top="46dp" android:left="30dp">
         <bitmap
             android:src="@drawable/ic_today_white_48dp"
-            android:gravity="center"/>
+            android:gravity="top"/>
     </item>
 
 </layer-list>
