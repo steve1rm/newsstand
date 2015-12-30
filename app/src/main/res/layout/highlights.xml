@@ -53,5 +53,4 @@
         android:textColor="@android:color/white"
         android:fontFamily="sans-serif-medium"/>
 
-
 </RelativeLayout>

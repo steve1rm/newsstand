@@ -10,8 +10,9 @@
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HIGHLIGHTS"
+        android:text="FILM"
         android:textSize="13sp"
         android:textColor="@android:color/white"
         android:fontFamily="sans-serif-medium"/>
+
 </LinearLayout>
