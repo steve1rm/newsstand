@@ -36,6 +36,8 @@ public class MainFragment extends Fragment {
         final Toolbar toolbar = (Toolbar)view.findViewById(R.id.tool_bar);
         AppCompatActivity activity = (AppCompatActivity)getActivity();
         activity.setSupportActionBar(toolbar);
+
+        /* Do not show the title of the app in the toolbar */
         activity.getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         TabLayout tabLayout = (TabLayout)view.findViewById(R.id.tabLayout);
