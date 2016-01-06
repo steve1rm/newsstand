@@ -4,8 +4,9 @@ package androidbox.me.newsstand;
 import android.app.Fragment;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Matrix;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -45,10 +46,7 @@ public class MainFragment extends Fragment {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inMutable = true;
 
-        Bitmap bitmapCouple = BitmapFactory.decodeResource(getResources(), R.drawable.couplePhoto, options);
-        Canvas canvas = new Canvas();
-        canvas.drawColor(getResources().getColor(R.color.colorBackgroundShape));
-        canvas.drawBitmap(bitmapCouple, new Matrix(), null);
+        Bitmap bitmapCouple = BitmapFactory.decodeResource(getResources(), R.drawable.couplephoto, options);
 
         if(Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             // bitmap.eraseColor(getResources().getColor(R.color.colorBackgroundShape));
@@ -58,28 +56,32 @@ public class MainFragment extends Fragment {
         }
 
         ivBackground.setImageBitmap(bitmapCouple);
+        PorterDuffColorFilter blueFilter = new PorterDuffColorFilter(getResources().getColor(R.color.colorBackgroundShape), PorterDuff.Mode.SRC_ATOP);
+        ivBackground.setColorFilter(blueFilter);
+
+  //      ivBackground.setColorFilter(Color.argb(200, 39, 39, 196));
 
         /* Attempt 1 */
         // ivBackground.setColorFilter(R.color.colorBackgroundShape, PorterDuff.Mode.DARKEN);
         // ivBackground.setColorFilter(R.color.colorBackgroundShape);
-        ivBackground.setImageBitmap(bitmapCouple);
+        //ivBackground.setImageBitmap(bitmapCouple);
 
         /* Attempt 2 */
-        // Bitmap bitmapCouple = BitmapFactory.decodeResource(getResources(), R.drawable.couplePhoto, options);
+        // Bitmap bitmapCouple = BitmapFactory.decodeResource(getResources(), R.drawable.couplephoto, options);
         // bitmap.eraseColor(getResources().getColor(R.color.colorBackgroundShape));
-        ivBackground.setImageBitmap(bitmapCouple);
+        //ivBackground.setImageBitmap(bitmapCouple);
 
         /* Attempt 3 */
-        /*Bitmap bitmapCouple = BitmapFactory.decodeResource(getResources(), R.drawable.couplePhoto, options);
+        /*Bitmap bitmapCouple = BitmapFactory.decodeResource(getResources(), R.drawable.couplephoto, options);
         Bitmap newBitmap = Bitmap.createBitmap(bitmapCouple.getWidth(), bitmapCouple.getHeight(), bitmapCouple.getConfig());
         Canvas canvas = new Canvas(newBitmap);
         canvas.drawColor(getResources().getColor(R.color.colorBackgroundShape));
         canvas.drawBitmap(bitmapCouple, 0, 0, null);*/
-        ivBackground.setImageBitmap(bitmapCouple);
+       // ivBackground.setImageBitmap(bitmapCouple);
 
         /* Attempt 4 */
 /*
-        Bitmap bitmapCouple = BitmapFactory.decodeResource(getResources(), R.drawable.couplePhoto, options);
+        Bitmap bitmapCouple = BitmapFactory.decodeResource(getResources(), R.drawable.couplephoto, options);
         Canvas canvas = new Canvas();
         canvas.drawColor(getResources().getColor(R.color.colorBackgroundShape));
         canvas.drawBitmap(bitmapCouple, new Matrix(), null);

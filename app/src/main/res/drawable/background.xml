@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:height="240dp">
-        <bitmap android:src="@drawable/couplePhoto"/>
+        <bitmap android:src="@drawable/couplephoto"/>
     </item>
 
     <item android:height="240dp">
